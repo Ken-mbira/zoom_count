@@ -5,3 +5,5 @@ def is_csv(file_path:str) -> bool:
         return True
     
     return False
+
+# def date_checker(date_string:str)

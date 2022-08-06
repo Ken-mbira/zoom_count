@@ -154,3 +154,8 @@ cython_debu
 *.json
 
 images/
+
+#Location for storing the saved csv files
+staging/
+staging
+/staging

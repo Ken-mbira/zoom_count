@@ -65,10 +65,11 @@ def main():
                         total_attendance += int(i)
 
                     receiver_number = config("RECEIVER_NUMBER")
+                    receiver_name = config("RECEIVER_NAME")
 
                     try:
                         my_text = text.Text()
-                        my_text.send_text(receiver_name="Ken Mbira",receiver_number=receiver_number,zoom_attendance=total_attendance)
+                        my_text.send_text(receiver_name=receiver_name,receiver_number=receiver_number,zoom_attendance=total_attendance)
                     except Exception as e:
                         raise e
 

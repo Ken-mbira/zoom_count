@@ -162,3 +162,7 @@ staging
 staging2/
 staging2
 /staging2
+
+already_read.txt
+already_read.txt/
+/already_read.txt

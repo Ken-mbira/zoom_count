@@ -32,5 +32,4 @@ class Text():
         try:
             self.twilio_client.messages.create(to=receiver_number,from_=self.twilio_number,body=self.message_body.format(receiver_name,zoom_attendance))
         except Exception as e:
-            print(e)
-            messagebox.showwarning('Zoom Count Error', e)
+            messagebox.showwarning('Zoom Count Error', "There was a problem sending the message, please make sure your credentials are correct.")

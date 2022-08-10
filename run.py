@@ -1,11 +1,13 @@
 from datetime import datetime
 import os
+
+# local modules
 import helpers
+import text
 
 import tkinter.messagebox as messagebox
 
 import pandas as pd
-from twilio.rest import Client
 from decouple import config
 
 def main():
@@ -54,20 +56,13 @@ def main():
             for i in list(attendance_dict.values()):
                 total_attendance += int(i)
 
-            account_sid = config("TWILIO_ACCOUNT_SID")
-            auth_token = config("TWILIO_ACCOUNT_TOKEN")
-            sender_number = config("TWILIO_NUMBER")
             receiver_number = config("RECEIVER_NUMBER")
 
-            client = Client(account_sid,auth_token)
-
-            message = client.messages.create(
-                to=receiver_number,
-                from_=sender_number,
-                body=f"Hello Ken the attendees in zoom today were {total_attendance}"
-            )
-
-            print(message.sid)
+            try:
+                my_text = text.Text()
+                my_text.send_text(receiver_name="Ken Mbira",receiver_number=receiver_number,zoom_attendance=total_attendance)
+            except:
+                pass
 
 
 if __name__ == '__main__':  

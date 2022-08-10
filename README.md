@@ -1,5 +1,5 @@
-# Zoom Total
-Welcome to zoom total, this application enables you to get the exact total for all your attendees in zoom instantly provided the attendance poll report.
+# Zoom Count
+Welcome to zoom count, this application enables you to get the exact total for all your attendees in zoom instantly provided the attendance poll report.
 
 You will need to set up a zoom poll which allows your attendees to enter the number of people who attended using their device.
 
